@@ -107,7 +107,7 @@ class Commands:
             c_args = words[1:]
             cls.log.debug(f"words={words}\ncommand={command}\nc_args={c_args}")
             if command not in cls._registered_commands:
-                cls.log.error(f"unable to find command.{message}")
+                cls.log.debug(f"unable to find command.{message}")
                 raise CommandNotFoundException(f"Unable to find command {message}")
             else:
                 cls.log.debug("found command, invoking...")
